@@ -1,0 +1,169 @@
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  margin: 2px;
+  padding: 8px;
+  font-size: 12px;
+  border: none;
+}
+
+#head3 {
+font-weight: bold;
+
+}
+
+#menu, #menu ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+#menu {
+
+margin-bottom: 4px;
+}
+
+#menu:before, #menu:after {
+  content: "";
+  display: block;
+}
+
+#menu:after { clear: both; }
+
+
+
+
+#menu li {
+  float: left;
+  position: relative;
+}
+
+#menu a {
+  float: left;
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+#menu ul {
+
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 130px;
+  z-index: 2000;
+}
+
+#menu li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 0px;
+  transition-delay:0.1s;
+
+}
+
+#menu ul ul {
+  top: 0px;
+  left: 100%;
+
+
+}
+
+#menu ul a {
+  padding: 8px;
+  width: 160px;
+  display: block;
+  white-space: nowrap;
+  float: none;
+  text-transform: none;
+  border-style: solid inset;
+  border-width: 0.2px;
+}
+
+#menu ul a:hover { background-color: #ddd; }
+
+
+
+
+
+
+
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+#spinstock {
+  visibility: hidden;
+  position: fixed;
+  left: 50%;
+}
+
+/* #spinstock #cheom{ */
+/* color: magenta; */
+/* } */
+
+
+.ComponentPanel .tooltiptext {
+  visibility: hidden;
+  width: max-content; 
+  max-width: 400px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 3px 6px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.ComponentPanel:hover .tooltiptext {
+  visibility: visible;
+  transition-delay:0.5s;
+}
+
+

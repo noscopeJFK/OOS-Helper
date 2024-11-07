@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "OOS Delegate Helper",
+  "version": "1.0",
+
+  "description": "Helper addon for catering purposes",
+  "permissions": ["activeTab", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  
+  
+  
+  "content_scripts": [
+  {
+    "matches": ["https://menuwest/*"],
+    "js": ["lib/jquery.min.js","content.js"],
+	"all_frames": true,
+	"runAt": ["document_idle"]
+	}
+  ],	
+"web_accessible_resources": [{
+  "resources": ["script.js", "nav.html", "style.css"],
+  "runAt": ["document_idle"],
+  "matches": ["<all_urls>"]
+  
+
+}]
+  
+  
+}
